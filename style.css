@@ -33,7 +33,7 @@ body {
 .center {
   color:white;
   font-size:50px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Thin', sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -44,4 +44,19 @@ body {
 
 .center2 {
   font-size:20px
+}
+
+.footer {
+  position: fixed;
+  font-family: 'Roboto', sans-serif;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  text-align: center;
+}
+
+.icon {
+  text-align: left
 }
