@@ -1,0 +1,23 @@
+{
+  "name": "ggtylerr-website-1",
+  "version": "1.0.0",
+  "description": "An open-source website for my projects/blog. Currently WIP and hosted on repl.it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggtylerr/ggtylerr-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ggtylerr/ggtylerr-website/issues"
+  },
+  "homepage": "https://github.com/ggtylerr/ggtylerr-website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
