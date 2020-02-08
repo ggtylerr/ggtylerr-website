@@ -1,0 +1,114 @@
+body {
+  background: linear-gradient(90deg, #00dbff, #006bff);
+  background-size: 400% 400%;
+
+  -webkit-animation: bg 10s ease infinite;
+  -moz-animation: bg 10s ease infinite;
+  -o-animation: bg 10s ease infinite;
+  animation: bg 10s ease infinite;
+}
+
+@-webkit-keyframes bg {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
+@-moz-keyframes bg {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
+@-o-keyframes bg {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
+@keyframes bg {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 100%}
+    100%{background-position:0% 0%}
+}
+
+
+.center {
+  color:white;
+  font-size:50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.center2 {
+  font-size:20px
+}
+
+.footer {
+  position: fixed;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.icon {
+  text-align: left;
+}
+
+.icon a:link {text-decoration: none; color:white;}
+.icon a:visited {text-decoration: none; color:white;}
+.icon a:hover {text-decoration: none; color:white;}
+.icon a:active {text-decoration: none; color:white;}
+
+.links a:link {font-weight: 500; text-decoration: none; color:orange;}
+.links a:visited {font-weight: 500; text-decoration: none; color:orange;}
+.links a:hover {font-weight: 500; text-decoration: none; color:orange;}
+.links a:active {font-weight: 500; text-decoration: none; color:orange;}
+
+.center a:link {font-weight: 500; color:orange;}
+.center a:visited {font-weight: 500; color:orange;}
+.center a:hover {font-weight: 500; color:orange;}
+.center a:active {font-weight: 500; color:orange;}
+
+.proj_h {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.proj_p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+.proj_p a:link {font-weight: 500; color:orange;}
+.proj_p a:visited {font-weight: 500; color:orange;}
+.proj_p a:hover {font-weight: 500; color:orange;}
+.proj_p a:active {font-weight: 500; color:orange;}
+
+hr {
+  border-top: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+table td {
+  display: table-cell;
+  vertical-align: 0px;
+}
+
+.fontonly {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.fontonly a:link {font-weight: 500; color:orange;}
+.fontonly a:visited {font-weight: 500; color:orange;}
+.fontonly a:hover {font-weight: 500; color:orange;}
+.fontonly a:active {font-weight: 500; color:orange;}
