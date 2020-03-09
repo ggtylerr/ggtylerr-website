@@ -9,24 +9,24 @@ body {
 }
 
 @-webkit-keyframes bg {
-    0%{background-position:0% 0%}
+    0%{background-position:0 0}
     50%{background-position:100% 100%}
-    100%{background-position:0% 0%}
+    100%{background-position:0 0}
 }
 @-moz-keyframes bg {
-    0%{background-position:0% 0%}
+    0%{background-position:0 0}
     50%{background-position:100% 100%}
-    100%{background-position:0% 0%}
+    100%{background-position:0 0}
 }
 @-o-keyframes bg {
-    0%{background-position:0% 0%}
+    0%{background-position:0 0}
     50%{background-position:100% 100%}
-    100%{background-position:0% 0%}
+    100%{background-position:0 0}
 }
 @keyframes bg {
-    0%{background-position:0% 0%}
+    0%{background-position:0 0}
     50%{background-position:100% 100%}
-    100%{background-position:0% 0%}
+    100%{background-position:0 0}
 }
 
 
@@ -99,7 +99,7 @@ hr {
 
 table td {
   display: table-cell;
-  vertical-align: 0px;
+  vertical-align: 0;
 }
 
 .fontonly {
