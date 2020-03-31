@@ -56,10 +56,15 @@ body {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   color: white;
+  display: table;
+  height: 32px;
+  overflow: hidden;
 }
 
+
 .icon {
-  text-align: left;
+  text-align: left; 
+  width: 100%;
 }
 
 .icon a:link {text-decoration: none; color:white;}
@@ -67,14 +72,20 @@ body {
 .icon a:hover {text-decoration: none; color:white;}
 .icon a:active {text-decoration: none; color:white;}
 
+.links {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
 .links a:link {font-weight: 500; text-decoration: none; color:orange;}
 .links a:visited {font-weight: 500; text-decoration: none; color:orange;}
-.links a:hover {font-weight: 500; text-decoration: none; color:orange;}
+.links a:hover {font-weight: 500; text-decoration: none; color:yellow;}
 .links a:active {font-weight: 500; text-decoration: none; color:orange;}
 
 .center a:link {font-weight: 500; color:orange;}
 .center a:visited {font-weight: 500; color:orange;}
-.center a:hover {font-weight: 500; color:orange;}
+.center a:hover {font-weight: 500; color:yellow;}
 .center a:active {font-weight: 500; color:orange;}
 
 .proj_h {
@@ -89,7 +100,7 @@ body {
 }
 .proj_p a:link {font-weight: 500; color:orange;}
 .proj_p a:visited {font-weight: 500; color:orange;}
-.proj_p a:hover {font-weight: 500; color:orange;}
+.proj_p a:hover {font-weight: 500; color:yellow;}
 .proj_p a:active {font-weight: 500; color:orange;}
 
 hr {
@@ -110,5 +121,5 @@ table td {
 
 .fontonly a:link {font-weight: 500; color:orange;}
 .fontonly a:visited {font-weight: 500; color:orange;}
-.fontonly a:hover {font-weight: 500; color:orange;}
+.fontonly a:hover {font-weight: 500; color:yellow;}
 .fontonly a:active {font-weight: 500; color:orange;}
