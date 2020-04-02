@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>ggtylerr</title>
-    <link href="dsabot.css" rel="stylesheet" type="text/css" />
+    <link href="/projects/dsabot.css" rel="stylesheet" type="text/css" />
     <!-- Icon -->
     <link rel="shortcut icon" href="https://ggtylerr-website.tylerflowers.repl.co/favicon.ico" />
     <!-- Roboto -->
@@ -12,13 +12,26 @@
     <!-- JQuery + Footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="/footerScript.js"></script>
+    <!-- Redirect mobile -->
+    <script src="/projects/mobileredirect.js"></script>
   </head>
   <body>
     <div class="center" style="text-align:center;">
-      <img src="dsabot.svg" height="300px"/><br/>
-      <img src="dsabottext.svg" alt="DSA BOT" width="750px"/><br/>
-      The Discord bot made for esports.
-      <p class="center2">Officially available for the public on 04/02/2020</p>
+      <img src="/projects/dsabot.svg" height="300px"/><br/>
+      <span style="position:relative;top:-50px;">
+        <img src="/projects/dsabottext.svg" alt="DSA BOT" style="width:750px;"/><br/>
+        The Discord bot made for esports.
+        <a class="coolbtns" href="https://discordapp.com/api/oauth2/authorize?client_id=675555531901108296&permissions=8&scope=bot">Invite to your server</a>
+        <a class="normalbtns" href="https://github.com/ggtylerr/DSA-Disc-Bot">Source</a>
+        <span class="dot">●</span>
+        <a class="normalbtns" href="/projects/dsabot/commands">Commands</a>
+        <span class="dot">●</span>
+        <a class="normalbtns" href="https://stats.uptimerobot.com/N70NLTN0r0">Status</a>
+        <span class="dot">●</span>
+        <a class="normalbtns" href="https://discord.gg/N5HnVrA">Support Server</a>
+        <span class="dot">●</span>
+        <a class="normalbtns" href="https://repl.it/@TylerFlowers/DSA-Disc-Bot">Hosting Server</a>
+      </span>
     </div>
     <div id="footer"></div>
   </body>

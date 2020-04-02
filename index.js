@@ -19,6 +19,7 @@ app.get('/social',(req,res) => res.sendFile(path.join(__dirname + '/public/socia
 app.get('/projects',(req,res) => res.sendFile(path.join(__dirname + '/public/projects.html')));
 app.get('/projects/released',(req,res) => res.sendFile(path.join(__dirname + '/public/projects/released.html')));
 app.get('/projects/upcoming',(req,res) => res.sendFile(path.join(__dirname + '/public/projects/upcoming.html')));
+app.get('/projects/dsabot',(req,res) => res.sendFile(path.join(__dirname + '/public/projects/dsabot.html')));
 
 // Error files
 app.use(function(req,res) {
