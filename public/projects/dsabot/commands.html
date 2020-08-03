@@ -12,14 +12,31 @@
     <!-- JQuery + Footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="/footerScript.js"></script>
+    <!-- Tabs -->
+    <script src="/projects/dsabot/tabs.js"></script>
+    <!-- Loading commands thru JSON -->
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="/projects/dsabot/loadrenders.js"></script>
   </head>
-  <body>
-    <div class="center" style="text-align:center;">
-      Page is currently being worked on!<br/>
-      For now, type<br/>
-      "@DSA Bot#0607 help"<br/> in a server with the bot to get a list of commands.<br/>
-      <a class="coolbtns" href="/projects/dsabot">Back</a>
+  <body onload="render()">
+    <p style="color:red;font-family:'Roboto',sans-serif;text-align:center;">Please note that not all of the images in the Esports commands are done.</p>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'gen')" id="default">General</button>
+      <button class="tablinks" onclick="openTab(event, 'esprt')">Esports</button>
+      <button class="tablinks" onclick="openTab(event, 'meme')">Memes</button>
+      <button class="tablinks" onclick="openTab(event, 'cvd19')">COVID-19</button>
+      <button class="tablinks" onclick="openTab(event, 'admin')">Admin</button>
+      <button class="tablinks" onclick="openTab(event, 'nopre')">No Prefix</button>
     </div>
+    <span id="cmds" style="color:white"><code>Commands loading, please hold...</code></div>
+    <br/><br/>
+    <script>
+    function toggle(i) {
+      var x = document.getElementById(i);
+      if (window.getComputedStyle(x).display === "none") x.style.display = "inline";
+      else x.style.display = "none";
+    }
+    </script>
     <div id="footer"></div>
   </body>
 </html>
