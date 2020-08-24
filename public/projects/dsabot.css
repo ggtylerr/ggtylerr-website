@@ -55,8 +55,10 @@ body {background: #2C2F33;}
   overflow: hidden;
 }
 .icon {
-  text-align: left;
+  text-align: left; 
   width: 100%;
+  font-size: 48px;
+  padding: 5px 5px;
 }
 .icon a:link {text-decoration: none; color:white;}
 .icon a:visited {text-decoration: none; color:white;}

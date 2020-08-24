@@ -65,12 +65,14 @@ body {
 .icon {
   text-align: left; 
   width: 100%;
+  font-size: 48px;
+  padding: 5px 5px;
 }
 
-.icon a:link {text-decoration: none; color:white;}
-.icon a:visited {text-decoration: none; color:white;}
-.icon a:hover {text-decoration: none; color:white;}
-.icon a:active {text-decoration: none; color:white;}
+.icon a:link {text-decoration: none;}
+.icon a:visited {text-decoration: none;}
+.icon a:hover {text-decoration: none;}
+.icon a:active {text-decoration: none;}
 
 .links {
   display: table-cell;
