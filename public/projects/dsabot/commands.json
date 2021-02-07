@@ -531,6 +531,16 @@
         ]
       },
       {
+        "name": "dmrole",
+        "sum": "DMs a message to anyone with that role in a server. (Usable only in servers)",
+        "format": " <role> <msg>",
+        "details": [
+          {"detail":"Aliases: dmroles, msgrole, msgroles"},
+          {"detail":"Group: Admin Commands (<code>admin:dmrole</code>)"},
+          {"detail":"You need the \"Mention Everyone\" permission in order to run this command."}
+        ]
+      },
+      {
         "name": "smashggqueueadmin",
         "sum": "Queues up a tournament or league to be ready for commands. (Usable only in servers)",
         "format": " [bool]",
