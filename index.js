@@ -4,22 +4,29 @@ const app = express();
 const path = require('path');
 const port = 3000;
 
-// Static crap
-app.use(express.static('public', {
+// Remove .html extensions
+var fs = require('fs');
+var publicdir = __dirname + '/public';
+
+app.use(function(req, res, next) {
+  if (req.path.indexOf('.') === -1) {
+    var file = publicdir + req.path + '.html';
+    fs.exists(file, function(exists) {
+      if (exists)
+        req.url += '.html';
+      next();
+    });
+  }
+  else
+    next();
+});
+
+app.use(express.static(publicdir, {
   extensions: ['html', 'htm']
 }));
 
 // Index
 app.get('/', (req, res) => res.sendFile('public/index.html'));
-
-// Removing extensions (manually, hopefully I can figure something out at a later time)
-app.get('/blog',(req,res) => res.sendFile(path.join(__dirname + '/public/blog.html')));
-app.get('/blog/01-01-2020',(req,res) => res.sendFile(path.join(__dirname + '/public/01-01-2020.html')));
-app.get('/social',(req,res) => res.sendFile(path.join(__dirname + '/public/social.html')));
-app.get('/projects',(req,res) => res.sendFile(path.join(__dirname + '/public/projects.html')));
-app.get('/projects/released',(req,res) => res.sendFile(path.join(__dirname + '/public/projects/released.html')));
-app.get('/projects/upcoming',(req,res) => res.sendFile(path.join(__dirname + '/public/projects/upcoming.html')));
-app.get('/projects/dsabot',(req,res) => res.sendFile(path.join(__dirname + '/public/projects/dsabot.html')));
 
 // Error files
 app.use(function(req,res) {
