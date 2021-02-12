@@ -5,12 +5,12 @@ const path = require('path');
 const port = 3000;
 
 // Remove .html extensions
-var fs = require('fs');
-var publicdir = __dirname + '/public';
+const fs = require('fs');
+let publicdir = __dirname + '/public';
 
 app.use(function(req, res, next) {
   if (req.path.indexOf('.') === -1) {
-    var file = publicdir + req.path + '.html';
+    let file = publicdir + req.path + '.html';
     fs.exists(file, function(exists) {
       if (exists)
         req.url += '.html';
