@@ -1,8 +1,8 @@
-# ggtylerr.digital
+# ggtylerr.dev
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![Run on Repl.it](https://repl.it/badge/github/ggtylerr/ggtylerr-website)](https://repl.it/github/ggtylerr/ggtylerr-website)
-[![Website ggtylerr.digital](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://ggtylerr.digital)
+[![Website ggtylerr.dev](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://ggtylerr.dev)
 
 
 An open-source website for my projects/blog. Currently WIP and hosted on repl.it.
