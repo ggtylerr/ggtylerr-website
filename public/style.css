@@ -1,4 +1,6 @@
+/* Background */
 body {
+  background: #00abff;
   background: linear-gradient(90deg, #00dbff, #006bff);
   background-size: 400% 400%;
 
@@ -29,7 +31,7 @@ body {
     100%{background-position:0 0}
 }
 
-
+/* Centered text on front page */
 .center {
   color:white;
   font-size:50px;
@@ -43,10 +45,10 @@ body {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.center2 {
-  font-size:20px
-}
+/* Extra text (if needed) */
+.center2 {font-size:20px}
 
+/* Footer area */
 .footer {
   position: fixed;
   font-family: 'Roboto', sans-serif;
@@ -61,7 +63,7 @@ body {
   overflow: hidden;
 }
 
-
+/* Icons in footers */
 .icon {
   text-align: left; 
   width: 100%;
@@ -74,47 +76,363 @@ body {
 .icon a:hover {text-decoration: none;}
 .icon a:active {text-decoration: none;}
 
-.links {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
+/* (Item) Has ToolTip */
+.htt {
+  position: relative;
+  display: inline-block;
+  color:#00abff;
 }
 
-.links a:link {font-weight: 500; text-decoration: none; color:orange;}
-.links a:visited {font-weight: 500; text-decoration: none; color:orange;}
-.links a:hover {font-weight: 500; text-decoration: none; color:yellow;}
-.links a:active {font-weight: 500; text-decoration: none; color:orange;}
+/* ToolTip */
+.tt {
+  opacity: 0;
+  transition: opacity 0.5s;
+  width: 50px;
+  background-color: rgba(0,0,0,50%);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  position: absolute;
+  left: 0%;
+  top: 25%;
+  z-index: 1;
+}
 
+/* Tooltip functionality */
+.htt:hover .tt {opacity: 1;}
+
+/* Decrease size to fix smaller screens */
+@media only screen and (max-width: 410px) {
+  .icon {
+    font-size: 36px;
+  }
+  .tt {
+    width: 38px;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .icon {
+    font-size: 24px;
+  }
+  .tt {
+    width: 24px;
+    font-size: 8px;
+  }
+}
+
+/* Links in center text (if needed) */
 .center a:link {font-weight: 500; color:orange;}
 .center a:visited {font-weight: 500; color:orange;}
 .center a:hover {font-weight: 500; color:yellow;}
 .center a:active {font-weight: 500; color:orange;}
 
-.proj_h {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  color: white;
+/* Slight BG, required for large text areas for readability */
+.slightbg {
+  background-color:rgba(0,0,0,.25);
+  padding: 5px;
 }
 
-.proj_p {
+/* Card container */
+.cards {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* TODO: Find a way to properly center. Current solution only works half the time. */
+  align-items: center;
+  justify-items: center;
+}
+
+/* Individual cards */
+.card {
+  background-color:rgba(0,0,0,.25);
+  padding: 75px;
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  border: 1px solid #000;
+}
+
+/* Copy of .card with different hover functionality */
+.cardclick {
+  background-color:rgba(0,0,0,.25);
+  padding: 75px;
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+  border: 1px solid #000;
+  transition: all 0.5s;
+}
+
+/* Icon for cards */
+.cardicon {
+  height: 150px;
+  width: 150px;
+  display: block;
+  object-fit: contain;
+}
+
+/* For cards with more than an icon */
+.cardcover {
+  height: 150px;
+  width: 150px;
+  display: block;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.cardcover .cardicon {
+  height: 121px;
+  width: 121px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.5s;
+}
+
+.cardsubtitle {
+  font-size: 20px;
+  color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+  text-align: center;
 }
-.proj_p a:link {font-weight: 500; color:orange;}
-.proj_p a:visited {font-weight: 500; color:orange;}
-.proj_p a:hover {font-weight: 500; color:yellow;}
-.proj_p a:active {font-weight: 500; color:orange;}
 
+/* Changing text transition */
+.cngtxt {
+  position: relative;
+  transition: all 0.5s;
+  width: 150px;
+  height: 20px;
+  --cngtxtup: 25px;
+}
+.cardsubtitle.cngtxt.smol {
+  height: 14px;
+  --cngtxtup: 19px;
+}
+.cngtxtold, .cngtxtnew {
+  transition: all 0.5s;
+  width: 150px;
+  text-align: center;
+}
+.cngtxtnew {
+  position: relative;
+  opacity: 0;
+  bottom: var(--cngtxtup);
+}
+
+/* Smaller text */
+.cardsubtitle.smol {
+  font-size: 14px;
+  --cngtxtup: 19px;
+}
+
+/* Hover funcationality for cards */
+.cardhov {
+  display: none;
+}
+.card:hover {
+  height: 290px;
+  width: 290px;
+  padding: 5px;
+}
+.card:hover .cardhov {display:inline;}
+.card:hover .cardicon {display:none;}
+
+.cardclick:hover {
+  padding: 50px;
+  height: 200px;
+  width: 200px;
+}
+.cardclick:hover .cardcover {
+  height: 200px;
+  width: 200px;
+}
+.cardclick:hover .cardcover .cardicon {
+  height: 171px;
+  width: 171px;
+}
+.cardclick:hover .cardcover .cngtxt {
+  width: 200px;
+}
+.cardclick:hover .cardcover .cngtxt .cngtxtold, .cardclick:hover .cardcover .cngtxt .cngtxtnew {
+  width: 200px;
+}
+.cardclick:hover .cardcover .cardsubtitle.smol .cngtxtold, .cardclick:hover .cardcover .cardsubtitle.smol .cngtxtnew {
+  width: 200px;
+}
+.cardclick:hover .cardcover .cngtxt .cngtxtnew {
+  position: relative;
+  bottom: var(--cngtxtup);
+}
+
+/* Decrease size to fix smaller screens */
+@media only screen and (max-width: 310px) {
+  .card {
+    padding: 50px;
+    height: 100px;
+    width: 100px;
+  }
+  .cardicon {
+    height: 100px;
+    width: 100px;
+  }
+  .card:hover {
+    height: 190px;
+    width: 190px;
+  }
+  .cardhov {
+    font-size: 10px;
+  }
+  .cardclick {
+    padding: 50px;
+    height: 100px;
+    width: 100px;
+  }
+  .cardcover {
+    height: 100px;
+    width: 100px;
+  }
+  .cardcover .cardicon {
+    height: 81px;
+    width: 81px;
+  }
+  .cardsubtitle {
+    font-size: 14px;
+  }
+  .cardsubtitle.smol {
+    font-size: 8px;
+    --cngtxtup: 13px;
+  }
+  .cngtxt {
+    width: 100px;
+    height: 14px;
+    --cngtxtup: 19px;
+  }
+  .cardsubtitle.cngtxt.smol {
+    height: 8px;
+    --cngtxtup: 13px;
+  }
+  .cngtxtold, .cngtxtnew {
+    width: 100px;
+  }
+  .cardclick:hover {
+    padding: 25px;
+    height: 150px;
+    width: 150px;
+  }
+  .cardclick:hover .cardcover {
+    height: 150px;
+    width: 150px;
+  }
+  .cardclick:hover .cardcover .cardicon {
+    height: 131px;
+    width: 131px;
+  }
+  .cardclick:hover .cardcover .cngtxt {
+    width: 150px;
+  }
+  .cardclick:hover .cardcover .cngtxt .cngtxtold, .cardclick:hover .cardcover .cngtxt .cngtxtnew {
+    width: 150px;
+  }
+  .cardclick:hover .cardcover .cardsubtitle.smol .cngtxtold, .cardclick:hover .cardcover .cardsubtitle.smol .cngtxtnew {
+    width: 150px;
+  }
+}
+
+/* removes blurring on resized images */
+.noblurpixel {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+/* removes blurring on resized pixelated images */
+.noblurpixel {
+  image-rendering: -moz-pixelated;
+  image-rendering: -o-pixelated;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+/* Center in div */
+.containcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.containedcenter {
+  flex: 0 0 120px;
+  text-align: center;
+  font-size: 50px;
+  padding: 25px;
+  position: relative;
+}
+
+/* Bottom-right Links in div */
+.brlinks {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 16px;
+}
+.brlink {
+  margin-right: 5px;
+}
+
+/* Checkered BGs */
+.bgblack {
+  background-color: #2C2F33;
+  background-image: linear-gradient(45deg,#222427 25%,transparent 0,transparent 75%,#222427 0,#222427),linear-gradient(45deg,#222427 25%,transparent 0,transparent 75%,#222427 0,#222427);
+  background-size: 30px 30px;
+  background-position: 0 0,45px 45px;
+}
+.bgwhite {
+  background-color: white;
+  background-image: linear-gradient(45deg,#dbdbdb 25%,transparent 0,transparent 75%,#dbdbdb 0,#dbdbdb),linear-gradient(45deg,#dbdbdb 25%,transparent 0,transparent 75%,#dbdbdb 0,#dbdbdb);
+  color: black;
+  background-size: 30px 30px;
+  background-position: 0 0,45px 45px;
+}
+.bgclearskies {
+  background-color: #00abff;
+  background: linear-gradient(135deg, #00dbff, #006bff);
+}
+
+/* Color stuff for brand kit */
+.colorbar {
+  width: 100%;
+  background: linear-gradient(90deg, #00dbff, #006bff);
+  font-size: 24px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 25px;
+}
+.colordiv {
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  font-size: 24px;
+}
+
+/* Much nicer HR */
 hr {
   border-top: 1px solid white;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
 
-table td {
-  display: table-cell;
-  vertical-align: 0;
-}
-
+/* Font only elements */
 .fontonly {
   color: white;
   font-family: 'Roboto', sans-serif;

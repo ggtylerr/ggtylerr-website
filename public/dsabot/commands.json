@@ -1,0 +1,592 @@
+{
+  "group": [{
+    "name": "gen",
+    "command": [
+      {
+        "name": "count",
+        "sum": "# of msgs sent since the bot was added to the server.",
+        "details": [
+          {"detail":"Aliases: msgcount, messagecount, msg-count, message-count"},
+          {"detail":"Group: General Commands (<code>gen:count</code>)"},
+          {"detail":"Count is server-specific, and messages only count if they are made by a human."}
+        ]
+      },
+      {
+        "name": "eval",
+        "sum": "Executes Javascript Code.",
+        "format": " <script>",
+        "details": [
+          {"detail":"Group: Utility (<code>util:eval</code>)"},
+          {"detail":"Very powerful and very dangerous. Too bad it's disabled and nobody can use it. Get dunked on, nerd."}
+        ]
+      },
+      {
+        "name": "flip",
+        "sum": "Flip a coin.",
+        "details": [
+          {"detail":"Aliases: coin, coinflip"},
+          {"detail":"Group: General Commands (<code>gen:flip</code>)"}
+        ]
+      },
+      {
+        "name": "help",
+        "sum": "Displays a list of available groups, all commands in a group, or detailed information for a specified command.",
+        "format": " [command] [group]",
+        "details": [
+          {"detail":"Aliases: commands"},
+          {"detail":"Group: General Commands (<code>gen:help</code>)"},
+          {"detail":"This command may be part of a command name or a whole command name. If it isn't specified, all available commands will be listed."},
+          {"detail":"Examples:<br/>help<br/>help prefix<br/>help group General Commands"}
+        ]
+      },
+      {
+        "name": "invite",
+        "sum": "Links the bot invite and its main website.",
+        "details": [
+          {"detail":"Aliases: botinvite, inviteme"},
+          {"detail":"Group: General Commands (<code>gen:invite</code>)"}
+        ]
+      },
+      {
+        "name": "ping",
+        "sum": "Checks the bot's ping to the Discord server.",
+        "details": [
+          {"detail":"Group: Utility (<code>util:ping</code>)"}
+        ]
+      },
+      {
+        "name": "prefix",
+        "sum": "Shows or sets the command prefix.",
+        "format": " [prefix/\"default\"/\"none\"]",
+        "details": [
+          {"detail":"Group: Utility (<code>util:prefix</code>)"},
+          {"detail":"If no prefix is provided, the current prefix will be shown. If the prefix is \"default\", the prefix will be reset to the bot's default prefix. If the prefix is \"none\", the prefix will be removed entirely, only allowing mentions to run commands. Only administrators may change the prefix."},
+          {"detail":"Examples:<br/>prefix<br/>prefix -<br/>prefix omg!<br/>prefix default<br/>prefix none"}
+        ]
+      },
+      {
+        "name": "rng",
+        "sum": "Random number from 1 thru (num)",
+        "format": " <num>",
+        "details": [
+          {"detail":"Aliases: random, rngnums, randomnums"},
+          {"detail":"Group: General Commands (<code>gen:rng</code>)"},
+          {"detail":"Chooses a random number from 1 through (number). Can accept decimals, but doesn't output a decimal. Does not work with any number less than 1."},
+          {"detail":"Examples:<br/>rng 10"}
+        ]
+      },
+      {
+        "name": "rngcase",
+        "sum": "Randomizes the case of a message.",
+        "format": " <msg>",
+        "details": [
+          {"detail":"Aliases: randomcase"},
+          {"detail":"Group: General Commands (<code>gen:rngcase</code>)"},
+          {"detail":"Randomizes the case (lowercase or uppercase) for each letter in a message."}
+        ]
+      },
+      {
+        "name": "sayhelp",
+        "sum": "Same exact thing as help, except it sends the message in the current channel instead of DMs. (Usable only in servers)",
+        "format": " [command] [group]",
+        "details": [
+          {"detail":"Aliases: saycommands"},
+          {"detail":"Group: General Commands (<code>gen:sayhelp</code>)"},
+          {"detail":"Examples:<br/>sayhelp<br/>sayhelp prefix<br/>sayhelp group General Commands"}
+        ]
+      },
+      {
+        "name": "send",
+        "sum": "Makes me send a message.",
+        "details": [
+          {"detail":"Aliases: msg, sendmsg"},
+          {"detail":"Group: General Commands (<code>gen:send</code>)"},
+          {"detail":"@ becomes italicized to prevent pings. Max possible characters is 1995 (assuming the prefix is 1 character and you're doing 'msg' and not 'send')"}
+        ]
+      },
+      {
+        "name": "support",
+        "sum": "Links the support server.",
+        "details": [
+          {"detail":"Aliases: server, helpserver, supportserver"},
+          {"detail":"Group: General Commands (<code>gen:support</code>)"}
+        ]
+      },
+      {
+        "name": "vote",
+        "sum": "Makes a vote message.",
+        "details": [
+          {"detail":"Aliases: poll"},
+          {"detail":"Group: General Commands (<code>gen:vote</code>)"},
+          {"detail":"Adds a thumbs up and down for voting. Remove reactions added by this bot to get a more accurate result."}
+        ]
+      },
+      {
+        "name": "y/n",
+        "sum": "Answers a yes/no question.",
+        "picname": "yorn",
+        "details": [
+          {"detail":"Aliases: yorn, yesorno"},
+          {"detail":"Group: General Commands (<code>gen:yorn</code>)"}
+        ]
+      }
+    ]
+  },{
+    "name": "chlge",
+    "command": [
+      {
+        "name": "challongeadd",
+        "sum": "Adds a participant to a tourney.",
+        "format": " <api_key> <id> <name> [challongename] [email] [seed]",
+        "details": [
+          {"detail":"Aliases: cadd"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongeadd</code>)"},
+          {"detail":"An API key is required, which you can get from <a href=\"https://challonge.com/settings/developer\">this link.</a> Please note this requires a verified email on your account.<br/>Your message will be deleted after sending it, however, <b>it's still highly recommended you only use this command (and others that use an api key) in a private chat, as other users and bots can save deleted messages.</b><br/>For the other parameters that aren't the API key, <a href=\"https://api.challonge.com/v1/documents/participants/create\">see the Challonge API documentation.</a>"},
+          {"detail":"Examples:<br/>challongeadd myapikey 696969 Nice<br/>challongeadd mykulkey tourney twitch.tv/ggtylerr ggtylerr notan@email.com<br/>challongeadd mycoolkey subdomain-tourney N5HnVrA cool cool@email.com 1"}
+        ]
+      },
+      {
+        "name": "challongecreate",
+        "sum": "Creates a tourney on Challonge.",
+        "format": " <api_key> <name> <url> [options]",
+        "details": [
+          {"detail":"Aliases: ccreate"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongecreate</code>)"},
+          {"detail":"An API key is required, which you can get from <a href=\"https://challonge.com/settings/developer\">this link.</a><br/>Your message will be deleted after sending it, however, <b>it's still highly recommended you only use this command (and others that use an api key) in a private chat, as other users and bots can save deleted messages.</b><br/>[options] is an optional parameter in JSON format. See the examples if you don't know what that is.<br/>For the other parameters that aren't the API key, <a href=\"https://api.challonge.com/v1/documents/tournaments/create\">see the Challonge API documentation.</a>"},
+          {"detail":"Examples:<br/>challongecreate abcdef12345 \"Cool Tourney\" cooltourney<br/>challongecreate superkey \"Lol\" ecksdee {\"tournament_type\":\"double elimination\"}"}
+        ]
+      },
+      {
+        "name": "challongedelete",
+        "sum": "Deletes a tourney on Challonge.",
+        "format": " <api_key> <id>",
+        "details": [
+          {"detail":"Aliases: cdelete, challongedestroy, cdestroy"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongedelete</code>)"},
+          {"detail":"An API key is required, which you can get from <a href=\"https://challonge.com/settings/developer\">this link.</a><br/>Your message will be deleted after sending it, however, <b>it's still highly recommended you only use this command (and others that use an api key) in a private chat, as other users and bots can save deleted messages.</b><br/>For the other parameters that aren't the API key, <a href=\"https://api.challonge.com/v1/documents/tournaments/destroy\">see the Challonge API documentation.</a>"},
+          {"detail":"Examples:<br/>challongedelete myapikey 696969<br/>challongedelete mykulkey badtourney<br/>challongedelete mycoolkey subdomain-badtourney"}
+        ]
+      },
+      {
+        "name": "challongefinalize",
+        "sum": "Ends a tourney.",
+        "format": " <api_key> <id>",
+        "details": [
+          {"detail":"Aliases: cfinalize, challongeend, cend"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongefinalize</code>)"},
+          {"detail":"Finalizes a tourney that has had all scores submitted, rendering its results permanent.<br/>An API key is required, which you can get from <a href=\"https://challonge.com/settings/developer\">this link.</a><br/>Your message will be deleted after sending it, however, <b>it's still highly recommended you only use this command (and others that use an api key) in a private chat, as other users and bots can save deleted messages.</b><br/>For the other parameters that aren't the API key, <a href=\"https://api.challonge.com/v1/documents/tournaments/finalize\">see the Challonge API documentation.</a>"},
+          {"detail":"Examples:<br/>challongefinalize myapikey 696969<br/>challongefinalize mykulkey tourney<br/>challongefinalize mycoolkey subdomain-tourney"}
+        ]
+      },
+      {
+        "name": "challongematches",
+        "sum": "Shows the current matches in a tourney.",
+        "format": " <id>",
+        "details": [
+          {"detail":"Aliases: cmatches"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongematches</code>)"},
+          {"detail":"Either an ID (e.g. 10230) or URL (e.g. 'single_elim' for challonge.com/single_elim) needs to be provided.<br/>If assigned to a subdomain, URL format must be <code>:subdomain-:tournament_url</code><br/>(e.g. 'test-mytourney' for test.challonge.com/mytourney)"},
+          {"detail":"Examples:<br/>challongematches 696969<br/>challongematches tourney<br/>challongematches subdomain-tourney"}
+        ]
+      },
+      {
+        "name": "challongerandomize",
+        "sum": "Randomizes participants.",
+        "format": " <api_key> <id>",
+        "details": [
+          {"detail":"Aliases: crandomize, challongerng, crng"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongerandomize</code>)"},
+          {"detail":"Randomizes the seeds among a tourney's participants. Only works before a tourney has started.<br/>An API key is required, which you can get from <a href=\"https://challonge.com/settings/developer\">this link.</a><br/>Your message will be deleted after sending it, however, <b>it's still highly recommended you only use this command (and others that use an api key) in a private chat, as other users and bots can save deleted messages.</b><br/>For the other parameters that aren't the API key, <a href=\"https://api.challonge.com/v1/documents/participants/randomize\">see the Challonge API documentation.</a>"},
+          {"detail":"Examples:<br/>challongematches 696969<br/>challongematches tourney<br/>challongematches subdomain-tourney"}
+        ]
+      },
+      {
+        "name": "challongereset",
+        "sum": "Resets a tourney.",
+        "format": " <api_key> <id>",
+        "details": [
+          {"detail":"Aliases: creset"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongereset</code>)"},
+          {"detail":"Resets a tourney, clearing all of its score and attachments. You can then add/remove/edit participants before starting it again.<br/>Either an ID (e.g. 10230) or URL (e.g. 'single_elim' for challonge.com/single_elim) needs to be provided.<br/>If assigned to a subdomain, URL format must be <code>:subdomain-:tournament_url</code><br/>(e.g. 'test-mytourney' for test.challonge.com/mytourney)"},
+          {"detail":"Examples:<br/>challongereset myapikey 696969<br/>challongereset mykulkey tourney<br/>challongereset mycoolkey subdomain-tourney"}
+        ]
+      },
+      {
+        "name": "challongestart",
+        "sum": "Starts a tourney.",
+        "format": " <api_key> <id>",
+        "details": [
+          {"detail":"Aliases: cstart"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongestart</code>)"},
+          {"detail":"Starts a tourney, opening up first round matches for reporting. The tourney must have at least 2 participants.<br/>Either an ID (e.g. 10230) or URL (e.g. 'single_elim' for challonge.com/single_elim) needs to be provided.<br/>If assigned to a subdomain, URL format must be <code>:subdomain-:tournament_url</code><br/>(e.g. 'test-mytourney' for test.challonge.com/mytourney)"},
+          {"detail":"Examples:<br/>challongestart myapikey 696969<br/>challongestart mykulkey tourney<br/>challongestart mycoolkey subdomain-tourney"}
+        ]
+      },
+      {
+        "name": "challongetourneys",
+        "sum": "Shows the tournaments on an account.",
+        "format": " <api_key>",
+        "details": [
+          {"detail":"Aliases: ctourneys"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongestart</code>)"},
+          {"detail":"Requires an API key and deletes your message after updating it to protect it.<br/>You can get an API key here: https://challonge.com/settings/developer<br/>Please note that this requires a verified email."},
+          {"detail":"Examples:<br/>challongetourneys myapikey"}
+        ]
+      },
+      {
+        "name": "challongeupdate",
+        "sum": "Updates a tourney on Challonge.",
+        "format": " <api_key> <id> <options>",
+        "details": [
+          {"detail":"Aliases: cupdate"},
+          {"detail":"Group: Challonge Commands (<code>chlge:challongeupdate</code>)"},
+          {"detail":"Options are in JSON format. Available options can be found here: https://api.challonge.com/v1/documents/tournaments/update<br/>Requires an API key and deletes your message after updating it to protect it.<br/>You can get an API key here: https://challonge.com/settings/developer<br/>Please note that this requires a verified email."},
+          {"detail":"Examples:<br/>challongeupdate abcdef12345 696969 {name:\"Nice\"}<br/>challongeupdate superkey lol {name:\"XD\",\"tournament_type\":\"double elimination\"}"}
+        ]
+      }
+    ]
+  },{
+    "name": "smash",
+    "command": [
+      {
+        "name": "smashggevent",
+        "sum": "Get info from an event.",
+        "format": " <slug>",
+        "details": [
+          {"detail":"Aliases: sevent, se"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashggevent</code>)"},
+          {"detail":"Does not display info on phases due to restrictions on smash.gg's API."},
+          {"detail":"Examples:<br/>smashggevent tournament/silver-state-smash-3/event/smash-ultimate-singles<br/>se https://smash.gg/tournament/silver-state-smash-3/event/smash-ultimate-singles"}
+        ]
+      },
+      {
+        "name": "smashggleague",
+        "sum": "Get info from a league.",
+        "format": " <slug>",
+        "details": [
+          {"detail":"Aliases: sleague, sl"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashggleague</code>)"},
+          {"detail":"Examples:<br/>smashggleague bud-light-beer-league-2020<br/>sl http://smash.gg/league/bud-light-beer-league-2020"}
+        ]
+      },
+      {
+        "name": "smashggparticipants",
+        "sum": "Get participants from a tourney.",
+        "format": " <slug>",
+        "details": [
+          {"detail":"Aliases: sparticipants, sp"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashggparticipants</code>)"},
+          {"detail":"Events/leagues not supported due to limitations on smash.gg's API. To view those standings, do <code>smashggstandings</code>"},
+          {"detail":"Examples:<br/>smashggparticipants tournament/silver-state-smash-3<br/>sp http://smash.gg/tournament/silver-state-smash-3"}
+        ]
+      },
+      {
+        "name": "smashggstandings",
+        "sum": "Get standings from an event or league.",
+        "format": " <slug>",
+        "details": [
+          {"detail":"Aliases: sstandings, ss"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashggstandings</code>)"},
+          {"detail":"Tourneys not supported due to limitations on smash.gg's API. To view all participants in a tourney, do <code>smashggparticipants</code>"},
+          {"detail":"Examples:<br/>smashggstandings tournament/silver-state-smash-3/event/smash-ultimate-singles<br/>ss http://smash.gg/tournament/silver-state-smash-3/event/smash-ultimate-singles<br/>smashggstandings smashuk-and-ireland-ultimate-circuit-2020<br/>ss http://smash.gg/league/smashuk-and-ireland-ultimate-circuit-2020"}
+        ]
+      },
+      {
+        "name": "smashggtourney",
+        "sum": "Get info from a tournament.",
+        "format": " <slug>",
+        "details": [
+          {"detail":"Aliases: stourney, st"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashggtourney</code>)"},
+          {"detail":"Does not display info on events, phases, etc."},
+          {"detail":"Examples:<br/>smashggtourney silver-state-smash-3<br/>st http://smash.gg/tournament/silver-state-smash-3"}
+        ]
+      },
+      {
+        "name": "smashggtourneycountry",
+        "sum": "Find tournaments based on their country.",
+        "format": " <country>",
+        "details": [
+          {"detail":"Aliases: stourneycountry, stcountry, stc"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashggtourneycountry</code>)"},
+          {"detail":"Examples:<br/>smashggtourneycountry US<br/>smashggtourneycountry JP<br/>smashggtourneycountry GB"}
+        ]
+      },
+      {
+        "name": "smashggtourneygame",
+        "sum": "Find tournaments based on their game.",
+        "format": " <game>",
+        "details": [
+          {"detail":"Aliases: stourneygame, stgame, stg"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashggtourneygame</code>)"},
+          {"detail":"Due to limitations in the smash.gg API, you need to provide an ID instead of the game name. <a href=\"https://docs.google.com/spreadsheets/d/1l-mcho90yDq4TWD-Y9A22oqFXGo8-gBDJP0eTmRpTaQ/edit#gid=1924677423\">A list can be found here.</a>"},
+          {"detail":"Examples:<br/>smashggtourneygame 1386<br/>smashggtourneygame 10<br/>smashggtourneygame 34223"}
+        ]
+      },
+      {
+        "name": "smashggtourneystate",
+        "sum": "Find tournaments based on their state.",
+        "format": " <state>",
+        "details": [
+          {"detail":"Aliases: stourneystate, ststate, sts"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashggtourneystate</code>"},
+          {"detail":"Examples:<br/>smashggtourneystate CA<br/>smashggtourneystate NV<br/>smashggtourneystate NY"}
+        ]
+      },
+      {
+        "name": "smashgguser",
+        "sum": "Get a user's info.",
+        "format": " <slug>",
+        "details": [
+          {"detail":"Aliases: suser, su"},
+          {"detail":"Group: smash.gg Commands (<code>smash:smashgguser</code>)"},
+          {"detail":"Examples:<br/>smashgguser user/a4829083<br/>su https://smash.gg/user/a4829083"}
+        ]
+      }
+    ]
+  },{
+    "name": "sggqu",
+    "command": [
+      {
+        "name": "smashggqueue",
+        "sum": "Queues up a tournament or league to be ready for commands.",
+        "format": " <slug>",
+        "details": [
+          {"detail":"Aliases: squeue, sq"},
+          {"detail":"Group: smash.gg queue Commands (<code>sggqu:smashggqueue</code>)"},
+          {"detail":"Can be set to admin only using the command <code>smashggqueueadmin</code>"},
+          {"detail":"Examples:<br/>smashggqueue silver-state-smash-3"}
+        ]
+      },
+      {
+        "name": "smashggqueueclear",
+        "sum": "Clears the current queued item.",
+        "details": [
+          {"detail":"Aliases: squeueclear, sqc"},
+          {"detail":"Group: smash.gg queue Commands (<code>sggqu:smashggqueueclear</code>)"}
+        ]
+      },
+      {
+        "name": "smashggqueueevent",
+        "sum": "Get info from a queued event.",
+        "details": [
+          {"detail":"Aliases: squeueevent, sqe"},
+          {"detail":"Group: smash.gg queue Commands (<code>sggqu:smashggqueueevent</code>)"},
+          {"detail":"Does not display info on phases due to restrictions on smash.gg's API."}
+        ]
+      },
+      {
+        "name": "smashggqueueleague",
+        "sum": "Get info from a queued league.",
+        "details": [
+          {"detail":"Aliases: squeueleague, sql"},
+          {"detail":"Group: smash.gg queue Commands (<code>sggqu:smashggqueueleague</code>)"}
+        ]
+      },
+      {
+        "name": "smashggqueueparticipants",
+        "sum": "Get participants from a tourney.",
+        "details": [
+          {"detail":"Aliases: squeueparticipants, sqp"},
+          {"detail":"Group: smash.gg queue Commands (<code>sggqu:smashggqueueparticipants</code>)"},
+          {"detail":"Events/leagues not supported due to limitations on smash.gg's API. To view those standings, do <code>smashggqueuestandings</code>"}
+        ]
+      },
+      {
+        "name": "smashggqueuestandings",
+        "sum": "Get standings from a queued event or league.",
+        "details": [
+          {"detail":"Aliases: squeuestandings, sqs"},
+          {"detail":"Group: smash.gg queue Commands (<code>sggqu:smashggqueuestandings</code>)"},
+          {"detail":"Tourneys not supported due to limitations on smash.gg's API. To view all participants in a tourney, do <code>smashggqueueparticipants</code>"}
+        ]
+      },
+      {
+        "name": "smashggqueuetourney",
+        "sum": "Get info from a queued tournament.",
+        "details": [
+          {"detail":"Aliases: squeuetourney, sqt"},
+          {"detail":"Group: smash.gg queue Commands (<code>sggqu:smashggqueuetourney</code>)"},
+          {"detail":"Does not display information on events, phases, etc."}
+        ]
+      },
+      {
+        "name": "smashggqueueview",
+        "sum": "Shows the current queued item.",
+        "details": [
+          {"detail":"Aliases: squeueview, sqv"},
+          {"detail":"Group: smash.gg queue Commands (<code>sggqu:smashggqueueview</code>)"}
+        ]
+      }
+    ]
+  },{
+    "name": "meme",
+    "command": [
+      {
+        "name": "coughcount",
+        "sum": "# of coughs in the server (including coughs by this bot) (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: coughs"},
+          {"detail":"Group: Meme Commands (<code>meme:coughcount</code>)"},
+          {"detail":"Count is server-specific. Includes the cough response by this bot. Other bots do not count."}
+        ]
+      },
+      {
+        "name": "cum",
+        "sum": "CONSUME THE CUM CHALICE",
+        "details": [
+          {"detail":"Aliases: cumchalice, chalice"},
+          {"detail":"Group: Meme Commands (<code>meme:cum</code>)"}
+        ]
+      },
+      {
+        "name": "f",
+        "sum": "Presses [F] to pay respects.",
+        "details": [
+          {"detail":"Aliases: pressf, fbutton, respects, payrespects"},
+          {"detail":"Group: Meme Commands (<code>meme:f</code>)"}
+        ]
+      },
+      {
+        "name": "geico",
+        "sum": "Save on car insurance.",
+        "details": [
+          {"detail":"Aliases: insurance, please_sponsor_us_geico"},
+          {"detail":"Group: Meme Commands (<code>meme:geico</code>)"}
+        ]
+      },
+      {
+        "name": "gold",
+        "sum": "Give reddit gold.",
+        "details": [
+          {"detail":"Aliases: reddit, redditgold"},
+          {"detail":"Group: Meme Commands (<code>meme:gold</code>)"}
+        ]
+      },
+      {
+        "name": "oof",
+        "sum": "OOF",
+        "details": [
+          {"detail":"Aliases: roblox, robloxoof"},
+          {"detail":"Group: Meme Commands (<code>meme:oof</code>)"}
+        ]
+      },
+      {
+        "name": "owoify",
+        "sum": "owoifies a message",
+        "details": [
+          {"detail":"Aliases: uwuify"},
+          {"detail":"Group: Meme Commands (<code>meme:owoify</code>)"}
+        ]
+      }
+    ]
+  },{
+    "name": "cvd19",
+    "command": [
+      {
+        "name": "covid19",
+        "sum": "Information regarding COVID-19",
+        "details": [
+          {"detail":"Aliases: covid-19, corona, covid19"},
+          {"detail":"Group: COVID-19 Commands (<code>meme:covid19</code>)"}
+        ]
+      },
+      {
+        "name": "covid19 (country)",
+        "sum": "Displays the country's statistics of the virus.",
+        "details": [
+          {"detail":"You can use a country name, iso2, iso3, or a country ID code. You can use <a href=\"https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes\">this list</a> to query your country if it doesn't work the first time around."}
+        ]
+      },
+      {
+        "name": "covid19 global",
+        "sum": "Displays the global statistics of the virus.",
+        "details": [
+          {"detail":"This data is gathered from disease.sh, however, it's also available on other platforms, like <a href=\"https://www.worldometers.info/coronavirus\">Worldometer.</a>"}
+        ]
+      },
+      {
+        "name": "covid19 help",
+        "sum": "Displays a list of available commands under the covid19 command."
+      },
+      {
+        "name": "covid19 info",
+        "sum": "Displays resources and information regarding the virus.",
+        "details": [
+          {"detail":"Actually, it's a really long info dump the developer made 4 months ago and really needs an update. It still has useful info though, take a read if you can."}
+        ]
+      }
+    ]
+  },{
+    "name": "admin",
+    "command": [
+      {
+        "name": "coughtimeout",
+        "sum": "# of coughs allowed per minute. (Usable only in servers)",
+        "format": " <num>",
+        "details": [
+          {"detail":"Group: Admin Commands (<code>admin:coughtimeout</code>)"},
+          {"detail":"Allows (num) coughs before it times out. Resets after a minute has passed since the first cough. Setting to a negative integer will remove it. Keep in mind it only counts the user coughing, not the additional cough made by this bot in response."},
+          {"detail":"Examples:<br/>coughtimeout 5"}
+        ]
+      },
+      {
+        "name": "smashggqueueadmin",
+        "sum": "Queues up a tournament or league to be ready for commands. (Usable only in servers)",
+        "format": " [bool]",
+        "details": [
+          {"detail":"Aliases: squeueadmin, sqa"},
+          {"detail":"Group: Admin Commands (<code>admin:smashggqueueadmin</code>)"}
+        ]
+      }
+    ]
+  },{
+    "name": "nopre",
+    "command": [
+      {
+        "name": "ayy",
+        "sum": "lmao",
+        "details": [
+          {"detail":"Group: No Prefix Commands (<code>nopre:ayy</code>)"}
+        ]
+      },
+      {
+        "name": "bruh",
+        "sum": "Certifies a bruh moment.",
+        "details": [
+          {"detail":"Group: No Prefix Commands (<code>nopre:bruh</code>)"}
+        ]
+      },
+      {
+        "name": "cough",
+        "sum": "Cough",
+        "details": [
+          {"detail":"Group: No Prefix Commands (<code>nopre:cough</code>)"}
+        ]
+      },
+      {
+        "name": "go da marcus",
+        "sum": "go da marcus",
+        "details": [
+          {"detail":"Aliases: go the marcus"},
+          {"detail":"Group: No Prefix Commands (<code>nopre:godamarcus</code>)"}
+        ]
+      },
+      {
+        "name": "me2",
+        "sum": "me too",
+        "details": [
+          {"detail":"Aliases: me too, me to, me two, mewtwo"},
+          {"detail":"Group: No Prefix Commands (<code>nopre:me2</code>)"}
+        ]
+      },
+      {
+        "name": "owo",
+        "sum": "What's this?",
+        "details": [
+          {"detail":"Group: No Prefix Commands (<code>nopre:owo</code>)"}
+        ]
+      }
+    ]
+  }]
+}

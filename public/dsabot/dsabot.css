@@ -1,0 +1,162 @@
+body {background: #2C2F33;}
+.center {
+  color:white;
+  font-size:50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.coolbtns {
+  font-size:20px;
+  font-weight: 500;
+  padding: 18px 35px;
+  border-radius: 50px;
+  background: linear-gradient(135deg,red,yellow);
+  transition: all .25s ease-in-out;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.39);
+  position: relative;
+  top: 10px;
+  display: block;
+}
+.coolbtns:hover {
+  -mox-transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+.coolbtns:link {text-decoration: none; color:white;}
+.coolbtns:visited {text-decoration: none; color:white;}
+.coolbtns:active {text-decoration: none; color:white;}
+.normalbtns {
+  font-size: 20px;
+  font-weight: 500;
+  transition: all .25s ease-in-out;
+}
+.normalbtns:link {font-weight: 500; text-decoration: none; color:red;}
+.normalbtns:visited {font-weight: 500; text-decoration: none; color:red;}
+.normalbtns:hover {font-weight: 500; text-decoration: none; color:yellow;}
+.normalbtns:active {font-weight: 500; text-decoration: none; color:red;}
+.dot {font-size: 20px;}
+.footer {
+  position: fixed;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  display: table;
+  height: 32px;
+  overflow: hidden;
+}
+.icon {
+  text-align: left; 
+  width: 100%;
+  font-size: 48px;
+  padding: 5px 5px;
+}
+.icon a:link {text-decoration: none; color:white;}
+.icon a:visited {text-decoration: none; color:white;}
+.icon a:hover {text-decoration: none; color:white;}
+.icon a:active {text-decoration: none; color:white;}
+.htt {
+  position: relative;
+  display: inline-block;
+}
+.htt i {color:#2C2F33;}
+.tt {
+  visibility: hidden;
+  width: 50px;
+  background-color: rgba(0,0,0,50%);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  position: absolute;
+  left: 0%;
+  top: 25%;
+  z-index: 1;
+}
+.htt:hover .tt {visibility: visible;}
+.links {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+.links a:link {font-weight: 500; text-decoration: none; color:blue;}
+.links a:visited {font-weight: 500; text-decoration: none; color:blue;}
+.links a:hover {font-weight: 500; text-decoration: none; color:skyblue;}
+.links a:active {font-weight: 500; text-decoration: none; color:blue;}
+.fontonly {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+.fontonly a:link {font-weight: 500; color:blue;}
+.fontonly a:visited {font-weight: 500; color:blue;}
+.fontonly a:hover {font-weight: 500; color:skyblue;}
+.fontonly a:active {font-weight: 500; color:blue;}
+.tab {
+  overflow: hidden;
+  border: 1px solid #191c1e;
+  background-color: #23272A;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+.tab button:hover {
+  background: #191c1e;
+}
+.tab button.active {
+  transition: 0.3s;
+  background: linear-gradient(135deg,red,yellow);
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #191c1e;
+  border-top: none;
+  animation: fadeEffect 1s;
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.command {
+  background-color: #23272A;
+  padding: 18px 35px;
+  border-radius: 50px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+hr {background-color:#191c1e;height:1px;border:0;}
+code {
+  background-color: #191c1e;
+  padding: 3px 3px;
+}
+.fit {
+  max-width:100%;
+  max-height:100%;
+}
+.clickable {cursor: pointer;}
+#template {display: none;}
+a {color: #00b0f4;text-decoration:none;}
+a:hover {text-decoration:underline;}
