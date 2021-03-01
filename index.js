@@ -36,7 +36,6 @@ app.get('/dsabot-mobile', (req, res) => res.sendFile(`${pubdir}/dsabot/dsabot-mo
 
 // Index
 app.get('/', (req, res) => res.sendFile('public/index.html'));
->>>>>>> origin/master
 
 // Error files
 app.use((req,res) => {
