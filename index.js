@@ -38,35 +38,12 @@ app.get('/dsabot-mobile', (req, res) => res.sendFile(`${pubdir}/dsabot/dsabot-mo
 app.get('/', (req, res) => res.sendFile('public/index.html'));
 
 // Error files
-app.use((req,res) => {
-  res.status(404);
-  res.sendFile(path.join(__dirname + '/public/error/404.html'));
-});
-
-app.use((req,res) => {
-  res.status(403);
-  res.sendFile(path.join(__dirname + '/public/error/403.html'));
-});
-
-app.use((req,res) => {
-  res.status(408);
-  res.sendFile(path.join(__dirname + '/public/error/408.html'));
-});
-
-app.use((req,res) => {
-  res.status(418);
-  res.sendFile(path.join(__dirname + '/public/error/418.html'));
-});
-
-app.use((req,res) => {
-  res.status(500);
-  res.sendFile(path.join(__dirname + '/public/error/500.html'));
-});
-
-app.use((req,res) => {
-  res.status(503);
-  res.sendFile(path.join(__dirname + '/public/error/503.html'));
-});
+app.use((req,res) => res.status(404).sendFile(path.join(__dirname + '/public/error/404.html')));
+app.use((req,res) => res.status(403).sendFile(path.join(__dirname + '/public/error/403.html')));
+app.use((req,res) => res.status(408).sendFile(path.join(__dirname + '/public/error/408.html')));
+app.use((req,res) => res.status(418).sendFile(path.join(__dirname + '/public/error/418.html')));
+app.use((req,res) => res.status(500).sendFile(path.join(__dirname + '/public/error/500.html')));
+app.use((req,res) => res.status(503).sendFile(path.join(__dirname + '/public/error/503.html')));
 
 // Listen
 app.listen(port, () => console.log('Server has started!'));
