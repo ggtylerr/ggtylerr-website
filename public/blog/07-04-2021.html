@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ggtylerr</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- OpenGraph -->
+    <meta property="og:site_name" content="ggtylerr.dev" />
+    <meta property="og:title" content="(07/04/2021) Regarding DSA Bot and its future" />
+    <meta property="og:description" content="I still don't know what DSA stands for ahHHHHHHHHHHHH" />
+    <!-- Discord Embed Color -->
+    <meta name="theme-color" content="#00abff">
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,500&display=swap" rel="stylesheet">
+    <!-- JQuery + Footer -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="/footerScript.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/30ccb5ba0b.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="fontonly slightbg blog">
+      <h2 style="display:inline">Regarding DSA Bot and its future </h2>
+      07/04/2021
+      <hr/>
+      <p>
+        In case you're here for <a href="/blog/03-01-2021">the transparency report (for some reason)</a>, here's your report: no cash recieved from Ko-Fi and I'm still looking for a job to pay the bills. The main problem with that right now is that, well...I'm not 18 yet. My birthday is on July 30th. Hopefully I'll be able to get one by then, though.
+      </p>
+      <p>
+        <i><b>Alright, now for the part you're here for - DSA Bot.</b></i> It's a project I've worked on for a year and a half, and for what it's worth, I'm proud of it, and the final update that just got released. However, if you're a developer or user of the bot, I personally urge you to wait just a little bit longer for its replacement.
+      </p>
+      <p>
+        DSA Bot started out as a passion project and in some ways it still is. I've worked on it for a year and half, and I think it's definitely time for some changes. I think it's important to show all the problems, though, so let me try and explain them.
+      </p>
+      <h3 style="display:inline" id="problems">Brief rundown on the problems in DSA Bot</h3>
+      <p>
+        <b>It's really only meant for one small community.</b>
+      </p>
+      <p>
+        DSA Bot is called "DSA" because it's made for the DSA Esports club. Because of that, there's a lot of inside jokes in there (like cough) and generally lesser-made code.
+      </p>
+      <p>
+        <b>Public Domain</b>
+      </p>
+      <p>
+        I made the bot use Unlicense initially due to it being incredibly simple at the time. It was mainly just an example of how a bot can be programmed. Since then, it's become more complex, and would benefit greatly from a license change.
+      </p>
+      <p>
+        <b>Dependence on repl.it</b>
+      </p>
+      <p>
+        Repl.it is a great platform for new coders - it's a free service that lets people run anything they want, from simple scripts to discord bots, all the way to separate other platforms.
+      </p>
+      <p>
+        What it isn't great at is being a dedicated hosting service. It's not meant for big projects that lots of people will use, that's just not what its for. In fact, all of it is shared through a handful of IP addresses. That's fine...until you realize it makes APIs and services unusable since everyone is doing it through the same IP.
+      </p>
+      <p>
+        That is why, if you use DSA bot and try to play a song, you may get a 429 code. That means there's too many requests, even if there isn't that much through the bot itself, and there's not much we can do about it.
+      </p>
+      <p>
+        <b>One man job</b>
+      </p>
+      <p>
+        I've briefly talked about it in <a href="/blog/06-06-2021">my last post,</a> but all of my projects up till now have all been done solo. Of course, they're open source and on GitHub, but there wasn't that much people that knew about them. That was fine at first, but with how many projects are in development, I'm obviously being stretched a bit thin here.
+      </p>
+      <p>
+        So, now that we understand what lead me to making a new version, let me show what I have planned.
+      </p>
+      <h3 style="display:inline" id="new">The better version</h3> ...It's not E3 anymore, but... <b><i>EXCLUSIVE: WORLD PREMIERE</i></b>
+      <p>
+        In collaboration with a few people I met, along with the esports organization that I'm still not allowed to say who they are, I'd like to present - gg bot.
+      </p>
+      <img src="gg bot.png" alt="gg bot logo" />
+      <p>
+        <i>Note - Logo is not final.</i>
+      </p>
+      <p>
+        gg bot is a "reimagining" of DSA Bot, in that it's less so a rewrite, but a rethinking of the concepts and commands in the bot. We will be going through everything, improving on what's existing, and trimming out the fat.
+      </p>
+      <p>
+        Since development starts right after this post goes up, there's not much I can say about it yet. If you want to help though, feel free to contact me <a href="/social">through any of my socials.</a> The best way to get to me is either through Discord, Twitter, or Email.
+      </p>
+      <h3 style="display:inline" id="future">The future of DSA Bot</h3>
+      <p>
+        With gg bot going to be a thing, what will happen to DSA Bot? Well, until gg bot releases, it will still be up. <i>This will still be hosted on repl.it, though, so do be wary of 429 errors.</i> When it releases, though, DSA bot will be shut down.
+      </p>
+      <p>
+        Of course, it can still be available through self-hosters and forks, but we still ask that developers wait until gg bot releases. It should only be used as a more fleshed out base for a bot.
+      </p>
+      <p>
+        As for the code for DSA Bot itself, it will go into permanent maintenence mode. No features will be added, and only critical bugs and security flaws will be patched. This is to give the most amount of effort to developing gg bot, and for anyone that relies on DSA Bot, we ask that you use gg bot instead. It won't be public domain, but it will be on a license that has very little restrictions (possibly MIT or GPLv3)
+      </p>
+      <p>
+        If you still want to check out DSA Bot while it lasts, <a href="/dsabot">you can get the bot here.</a>
+      </p>
+      <p>
+        <b><i>If you're reading this at the time of release, please note that this update will be pushed to the master branch and the public discord bot itself at 11:30 AM PT, with it going back up at 12 AM PT. This is to give time to compare changes and to give server owners a chance to prepare for the downtime.</i></b>
+      </p>
+      <p>
+        Thanks for reading. I still don't really know how to end these besides with the o/, so..... byee!
+      </p>
+      <p>
+        o/
+      </p>
+      <p>
+        ~ggtylerr
+      </p>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -481,6 +481,119 @@
       }
     ]
   },{
+    "name": "music",
+    "command": [
+      {
+        "name": "clear",
+        "sum": "Clears the queue (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: cl"},
+          {"detail":"Group: Music Commands (<code>music:clear</code>)"}
+        ]
+      },
+      {
+        "name": "join",
+        "sum": "Joins a VC if user is in one (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: summon"},
+          {"detail":"Group: Music Commands (<code>music:join</code>)"}
+        ]
+      },
+      {
+        "name": "leave",
+        "sum": "Leaves the current VC (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: disconnect, dc, end, stop"},
+          {"detail":"Group: Music Commands (<code>meme:f</code>)"}
+        ]
+      },
+      {
+        "name": "move",
+        "sum": "Moves that song to that position in the queue. (Usable only in servers)",
+        "format": " <song> <pos>",
+        "details": [
+          {"detail":"Aliases: mv"},
+          {"detail":"Group: Music Commands (<code>music:move</code>)"}
+        ]
+      },
+      {
+        "name": "nowplaying",
+        "sum": "View the list of songs/videos up next (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: np"},
+          {"detail":"Group: Music Commands (<code>music:nowplaying</code>)"}
+        ]
+      },
+      {
+        "name": "pause",
+        "sum": "Pauses the currently playing song. (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: pa"},
+          {"detail":"Group: Music Commands (<code>music:pause</code>)"}
+        ]
+      },
+      {
+        "name": "play",
+        "sum": "Play anything available on YouTube (Usable only in servers)",
+        "format": " <query>",
+        "details": [
+          {"detail":"Aliases: p"},
+          {"detail":"Group: Music Commands (<code>music:play</code>)"}
+        ]
+      },
+      {
+        "name": "queue",
+        "sum": "View the list of songs/videos up next (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: q"},
+          {"detail":"Group: Music Commands (<code>music:queue</code>)"}
+        ]
+      },
+      {
+        "name": "remove",
+        "sum": "Removes that song from the queue. (Usable only in servers)",
+        "format": " <song>",
+        "details": [
+          {"detail":"Aliases: rm"},
+          {"detail":"Group: Music Commands (<code>music:remove</code>)"}
+        ]
+      },
+      {
+        "name": "resume",
+        "sum": "Resumes the currently playing song. (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: r"},
+          {"detail":"Group: Music Commands (<code>music:remove</code>)"}
+        ]
+      },
+      {
+        "name": "skip",
+        "sum": "Skips the currently playing song. (Usable only in servers)",
+        "details": [
+          {"detail":"Aliases: s"},
+          {"detail":"Group: Music Commands (<code>music:skip</code>)"}
+        ]
+      },
+      {
+        "name": "skipto",
+        "sum": "Skips to that position in the queue. (Usable only in servers)",
+        "format": " <song>",
+        "details": [
+          {"detail":"Aliases: sto"},
+          {"detail":"Group: Music Commands (<code>music:skipto</code>)"}
+        ]
+      },
+      {
+        "name": "volume",
+        "sum": "Changes the volume (Usable only in servers)",
+        "format": " <volume>",
+        "details": [
+          {"detail":"Aliases: v"},
+          {"detail":"Group: Music Commands (<code>music:volume</code>)"}
+        ]
+      }
+    ]
+  },{
     "name": "cvd19",
     "command": [
       {
@@ -531,12 +644,12 @@
         ]
       },
       {
-        "name": "smashggqueueadmin",
-        "sum": "Queues up a tournament or league to be ready for commands. (Usable only in servers)",
-        "format": " [bool]",
+        "name": "settings",
+        "sum": "Either view or set settings on this server (Usable only in servers)",
+        "format": " [setting] [value]",
         "details": [
-          {"detail":"Aliases: squeueadmin, sqa"},
-          {"detail":"Group: Admin Commands (<code>admin:smashggqueueadmin</code>)"}
+          {"detail":"Aliases: set"},
+          {"detail":"Group: Admin Commands (<code>admin:settings</code>)"}
         ]
       }
     ]
